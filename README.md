@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    nav>ul{
+        background-color: skyblue;
+        padding-left: 0px;
+    }
+    nav li{
+        display:inline-block;
+        margin-right: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+    nav a{
+        color :white;
+        text-decoration: none;
+    }
+    table{
+        border : 1px solid gray;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    table>caption{
+        font-size: larger;
+        font-weight: bold;
+        padding-bottom: 15px;
+    }
+    thead td{
+        font-weight: bold;
+        background-color: aliceblue;
+    }
+    tr td{
+        padding: 8px 2em 8px 2em;
+    }
+    #box{
+        border: 1px solid blue;
+        background-color: bisque;
+        width: 150px;
+        height: 150px;
+    }
+</style>
 <body>
     
     <header>
@@ -15,11 +55,13 @@
             <li><a href="#week1">Week 1</a></li>
             <li><a href="#week2">Week 2</a></li>
             <li><a href="#week3">Week 3</a></li>
+            <br>
+            <li><a href="#week4">Week4</a></li>
         </ul>
     </nav>
     <hr><hr>
-    <a>웹에 관하여</a><br><br>
-    <section>
+    <a style="font-weight: bold; margin-left:10px ">웹에 관하여</a><br><br>
+    <section style="margin-left:10px">
         <details>
             <summary>웹의 기본 목적은</summary>
             웹의 기본 목적은 한 컴퓨터에서 만든 문서를 다른 컴퓨터에서
@@ -38,7 +80,7 @@
                 <tr>
                     <td>Week</td>
                     <td>Date</td>
-                    <td>Contents</td>
+                    <td style="width: 20em;">Contents</td>
                 </tr>
             </thead>
             <tbody>
@@ -72,8 +114,9 @@
             <section>
                 <h2 id="week1">Week 1</h2>
                 <ul>
-                    <li>강의 개요</li>
-                    <li>Visual Studio Code
+                    <li><a href="../자료/1주차_Syllabus.pdf">강의 개요</a></li>
+                    <li><a href="../자료/1주차_웹의개념과구조.pdf">웹의 개념과 구조</a></li>
+                    <li><a href="../자료/1주차_VisualStudioCode.pdf">Visual Studio Code</a>
                         <ol>
                             <li>설치</li>
                             <li>유용한 plug-ins</li>
@@ -81,7 +124,7 @@
                                 <li>Metarial Theme</li>
                                 <li>Prettier</li>
                                 <li>indent-rainbow</li>
-                                <li>AUto Rename Tag</li>
+                                <li>Auto Rename Tag</li>
                                 <li>HTML CSS Support</li>
                                 <li>Live Server</li>
                             </ul>
@@ -95,7 +138,7 @@
         <li>
             <section>
 
-                <h2 id="week2">Week 2: HTML Review</h2>
+                <h2 id="week2">Week2: <a href="../자료/2주차_HTML5-Review.pdf">HTML Review</a></h2>
                 <h3>Input Types</h3>
                 <u>Check Box</u><br><br>
 
@@ -126,8 +169,35 @@
         <hr>
         <li>
             <section>
-                <h2 id="week3">Week 3: CSS Review</h2>
+                <h2 id="week3">Week 3: <a href="../자료/3주차_CSS3-Review.pdf">CSS Review</a></h2>
+            </section>
+            <ul>
+                <li>Selectors
+                    <br>
+                    -> tag, #id, .class, 가상 클래스, 오버로딩
+                </li>
+                <li>Properties
+                    <br>
+                    -> background(color, image...), font(color, size, weight, family...)
+                </li>
+                <li>Box Model
+                    <br>
+                    -> block, inline, inline-block
+                    -> display : margin, padding, border, width, height
+                </li>
+                <li>Position
+                    <br>
+                    -> absolute, relative, fixed, float
+                </li>
+            </ul><br>
+            <div id="box">
 
+            </div>
+        </li>
+        <hr>
+        <li>
+            <section>
+                <h2 id="week4">Week 4:</h2><br><br><br>
             </section>
         </li>
     </ol>
