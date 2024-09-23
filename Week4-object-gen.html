@@ -7,7 +7,7 @@
 </head>
 <script>
 
-    <!-- 직접 객체 만들기 -->
+    // 직접 객체 만들기
     function register(){
         this.nStudnet+=1;
     }
@@ -29,7 +29,7 @@
     subject1.unregister = unregister;
     subject1.getStudentCount = getStudentCount;
 
-    <!-- 리터럴 표기법 -->
+    // 리터럴 표기법
     var subject2 = {
         korName:"클라우트컴퓨팅",
         engName:"cloudComputing",
@@ -47,7 +47,7 @@
         }
     }
 
-    <!-- 프로토타입 -->
+    // 프로토타입
     function Subject (korName, engName, classCode){
         this.korName = korName;
         this.engName = engName;
