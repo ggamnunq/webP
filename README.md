@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1</title>
+</head>
+<body>
+    <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Web Programming</h1>
+    <hr>
+    <ol>
+        <li>Week 1</li>
+        <ul>
+            <li>강의 개요</li>
+            <li>Visual Studio Code
+                <ol>
+                    <li>설치</li>
+                    <li>유용한 plug-ins</li>
+                    <ul>
+                        <li>Metarial Theme</li>
+                        <li>Prettier</li>
+                        <li>indent-rainbow</li>
+                        <li>AUto Rename Tag</li>
+                        <li>HTML CSS Support</li>
+                        <li>Live Server</li>
+                    </ul>
+                    <li>EMMET</li>
+                </ol>
+            </li>
+        </ul>
+        <hr>
+        <li>Week 2</li>
+    </ol>
+</body>
+</html>
