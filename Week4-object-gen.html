@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-gen</title>
+</head>
+<script>
+
+    <!-- 직접 객체 만들기 -->
+    function register(){
+        this.nStudnet+=1;
+    }
+
+    function unregister(){
+        this.nStudnet--;
+    }
+
+    function getStudentCount(){
+        return navigator;
+    }
+
+    var subject1 = new Object();
+    subject1.korName = "웹프로그래밍"
+    subject1.engName = "Web Programming"
+    subject1.classCode = "V024003"
+    subject1.nStudnet = 0
+    subject1.register = register;
+    subject1.unregister = unregister;
+    subject1.getStudentCount = getStudentCount;
+
+    <!-- 리터럴 표기법 -->
+    var subject2 = {
+        korName:"클라우트컴퓨팅",
+        engName:"cloudComputing",
+        classCode:"V024004",
+        nStudnet:0,
+
+        register:function(){
+            this.nStudnet+=1;
+        },
+        unregister:function(){
+            this.nStudnet-=1;
+        },
+        getStudentCount:function(){
+            return this.nStudnet;
+        }
+    }
+
+    <!-- 프로토타입 -->
+    function Subject (korName, engName, classCode){
+        this.korName = korName;
+        this.engName = engName;
+        this.classCode = classCode;
+        this.nStudnet = 0;
+
+        this.register = function(){
+            this.nStudnet += 1;
+        }
+
+        this.unregister = function(){
+            this.nStudnet -= 1;
+        }
+
+        this.getStudentCount = function(){
+            return this.nStudnet;
+        }
+
+    }
+
+</script>
+<body>
+    <h3>1. 직접 객체 만들기</h3>
+    <script>
+        document.write("교과목 이름 = " + subject1.korName + "<br>");
+        document.write("등록 학생 수 = " + subject1.nStudnet + "<br>");
+        subject1.register();
+        document.write("after register, 등록 학생 수 = " + subject1.nStudnet + "<br>"); 
+    </script>
+    <hr>
+
+    <h3>2. 리터럴 표기법</h3>
+    <script>
+        document.write("교과목 이름 = " + subject2.korName + "<br>");
+        document.write("등록 학생 수 = " + subject2.nStudnet + "<br>");
+        subject2.register();
+        document.write("after register, 등록 학생 수 = " + subject2.nStudnet + "<br>"); 
+    </script>
+    <hr>
+
+    <h3>3. Prototype</h3>
+    <script>
+        var subject3 = new Subject("프로그래밍 언어론", "Programming Language", "v0204005");
+        document.write("교과목 이름 = " + subject3.korName + "<br>");
+        document.write("등록 학생 수 = " + subject3.nStudnet + "<br>");
+        subject3.register();
+        document.write("after register, 등록 학생 수 = " + subject3.nStudnet + "<br>"); 
+    </script>
+</body>
+</html>
