@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function doShow(){
+            let ui = prompt("HTML text 또는 그냥 텍스트 입력");d
+            let p = document.getElementById("p");
+            p.innerHTML = ui;
+        }
+
+        function inputPrompt(){
+            let obj = document.getElementById("parent");
+            let newLi = document.createElement("li");
+            let msg = prompt("다음에는?");
+            newLi.innerHTML= msg;
+            newLi.setAttribute("id", "myLi");
+            newLi.onclick = function(){
+                let p = this.parentElement;
+            }
+            obj.appendChild(newLi);
+        }
+
+    </script>
+</head>
+<body>
+    <h3>계산해봅시다</h3>
+    <hr>
+    <p>2 + 4 = <span onclick="this.innerHTML = eval(2+4)">답</span></p>
+    <p>4 * 20 + 64 = <span onclick="this.innerHTML = eval(4*20+64)">답</span></p>
+    <p>20/5-8*2 = <span onclick="this.innerHTML = eval(20/5-8*2)">답</span></p>
+    <br>
+    <h3>innerHTML</h3>
+    <hr>
+    <p><span onclick="this.innerHTML = prompt('HTML 텍스트 혹은 그냥 텍스트를 입력하세요')">이번 여름에는 어디로 여행을 갈까요?</span></p>
+    <br>
+    <h3>라면 끓이는 순서</h3>
+    <hr>
+    <ol id="parent" type="A" style="background-color: yellowgreen;"
+        onclick="inputPrompt()">
+        <li>물을 끓인다</li>
+    </ol>
+</body>
+</html>
