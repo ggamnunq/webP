@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice9-6</title>
+</head>
+<script>
+
+    function resize(){
+
+        let changeRate = 1;
+        let image = document.getElementById("image");
+
+        if( event.deltaY > 0){
+            changeRate = 1.2;
+        }else if(event.deltaY < 0){
+            changeRate = 0.8;
+        } 
+
+        image.width *= changeRate;
+        image.height *= changeRate;
+        
+    }
+
+</script>
+<body>
+    
+    <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+    <hr>
+    이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.<br>
+    <img id="image" src="/apple.jpg" alt="image" onmousewheel="resize()">
+
+</body>
+</html>

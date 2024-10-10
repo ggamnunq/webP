@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice9-10</title>
+</head>
+<script>
+
+    function button(obj){
+
+        let exp = document.getElementById("exp");
+        let value = obj.value;
+
+        switch (value){
+            case "BACK":
+                exp.value = exp.value.substring(0, exp.value.length-1);
+                break;
+            case "CE":
+            case "C":
+                exp.value = "0";
+                break;
+            case "NONE":
+                break;
+            case "=":
+                exp.value = eval(exp.value);
+                break;
+            default:
+                if(exp.value == "0"){
+                    exp.value = value;
+                }
+                else{
+                    exp.value += value;
+                }
+                break;
+        }
+
+    }
+
+</script>
+<style>
+   
+    #exp{
+        width:220px;
+    }
+    
+    table input{
+        width:50px;
+    }
+    
+</style>
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <input id="exp" type="text" value="0">
+    <table>
+        <tbody>
+            <tr>
+                <td><input type="button" value="BACK" onclick="button(this)"></input></td>
+                <td><input type="button" value="CE" onclick="button(this)"></input></td>
+                <td><input type="button" value="C" onclick="button(this)"></input></td>
+                <td><input type="button" value="=" onclick="button(this)"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="button(this)"></input></td>
+                <td><input type="button" value="8" onclick="button(this)"></input></td>
+                <td><input type="button" value="9" onclick="button(this)"></input></td>
+                <td><input type="button" value="/" onclick="button(this)"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="button(this)"></input></td>
+                <td><input type="button" value="5" onclick="button(this)"></input></td>
+                <td><input type="button" value="6" onclick="button(this)"></input></td>
+                <td><input type="button" value="*" onclick="button(this)"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="button(this)"></input></td>
+                <td><input type="button" value="2" onclick="button(this)"></input></td>
+                <td><input type="button" value="3" onclick="button(this)"></input></td>
+                <td><input type="button" value="-" onclick="button(this)"></input></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="button(this)"></input></td>
+                <td><input type="button" value="+" onclick="button(this)"></input></td>
+                <td><input type="button" value="NONE" onclick="button(this)"></input></td>
+                <td><input type="button" value="NONE" onclick="button(this)"></input></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
