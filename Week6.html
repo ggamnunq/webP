@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function showImg(obj){
+
+        let image = document.getElementById("image");
+        image.src = obj.value;
+    }
+
+    function showImg2(obj){
+
+        let img = new Image();
+        img.src = obj.value;
+        obj.parentElement.appendChild(img);
+    }
+
+    function calc(e){
+    
+        if(e.keyCode == 13){
+            let exp = document.getElementById("exp");
+            let result = document.getElementById("result");
+            result.value = eval(exp.value);
+        }
+    }
+
+</script>
+<body >
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+    <hr>
+    <form>
+        <input type="radio" name="fruits" value="./banana.jpg" onclick="showImg(this)" checked>바나나
+        <input type="radio" name="fruits" value="./mango.jpg" onclick="showImg(this)">망고
+        <input type="radio" name="fruits" value="./apple.jpg" onclick="showImg(this)">사과
+        <br><img id="image" src="./banana.jpg" alt=".">
+    </form>
+    <br><br>
+    <h3>계산기 만들기</h3>
+    <hr>
+    수식을 입력하고 &lt;Enter&gt;를 입력하세요.,<br>
+    식 <input type="text" id="exp" onkeydown="calc(event)"><br>
+    값 <input type="text" id="result" value="">
+</body>
+</html>
