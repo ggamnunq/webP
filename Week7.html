@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week7</title>
+</head>
+<script>
+
+    let clock;
+    let isOperate;
+    let timerId;
+
+    function go(e){
+        clock = document.getElementById("clock");
+        isOperate = false;
+        timerId = setInterval("operate()", 1000);
+
+        clock.onclick = function(e){
+
+            if(isOperate == false){
+                clearInterval(timerId);
+                clock.style.color = "gray";
+            }
+            else{
+                timerId = setInterval("operate()", 1000);
+                clock.style.color = "black";
+            }
+            isOperate = !isOperate;
+        }
+        
+    }
+
+    function operate(){
+
+        let now = new Date();
+        clock.innerHTML = now.toLocaleTimeString();
+    }
+
+</script>
+<body onload="go()">
+    <h3>div 태그에 시계 만들기</h3>
+    <hr>
+    <div id="clock"></div>
+
+    
+
+</body>
+</html>
