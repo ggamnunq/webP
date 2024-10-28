@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기 쓰기</title>
+</head>
+<script>
+    
+    function save(){
+        if(!window.sessionStorage){
+            alert("세션 스토리지 지원 안됨");
+            return;
+        }
+        sessionStorage.setItem(date, textarea.value);
+    }
+
+    
+
+</script>
+<body>
+    <h3>일기 쓰기</h3>
+    <hr>
+    
+    오늘<span id="date"></span><br>
+    <textarea name="" id="textarea" style="width: 400px; height: 500px;"></textarea>
+    <br>
+    <button onclick="save()">저장</button>
+    <button onclick="show()">보기</button>
+    <script>
+        let date = new Date();
+        let dateDiv = document.getElementById("date");
+        date = date.toLocaleDateString();
+        dateDiv.innerHTML = date;
+        
+    </script> <br>
+</body>
+</html>
